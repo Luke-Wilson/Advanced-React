@@ -9,7 +9,12 @@ class MyApp extends App {
 		return (
 			<Container>
 				<Page>
-					< Component / > { /* this is the Component prop that is passed to the App component by Next */ }
+					
+					< Component / > 
+					{ /* this is the Component prop that is passed to the App component by Next */ }
+					{/* It will usually be one of the page components that are stored in the /pages directory. Next automatically handles the routing. */}
+					{/* This, in turn, is passed to our Page component as a child, and Page renders it using this.props.children */}
+
 				</Page>
 			</Container>
 		)
