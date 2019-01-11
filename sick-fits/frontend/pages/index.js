@@ -3,13 +3,16 @@ import Link from 'next/link';
 
 const Home = props => (
 	<div>
-		<p>Hey two!</p>
-		<a href="/sell">Anchor to sell</a>
-		<br />
-		<Link href="/sell">
-			<a>Sell</a>
-		</Link>
+		<p>Welcome to Sick Fits!</p>
+		
+		
 	</div>
 )
 
 export default Home;
+
+
+// Next.js automatically wraps all your pages in an <App /> component behind the scenes. 
+// Sometimes though, you'll want to create your own custom <App /> component. 
+// You can do this in the /pages directory by calling it _app.js. See https://github.com/zeit/next.js#custom-app
+
