@@ -1,4 +1,5 @@
-require('dotenv').config({ path: 'variables.env '});
+// Make sure our environment variables are accessible by our application. Use dotenv
+require('dotenv').config({ path: 'variables.env'});
 
 const createServer = require('./createServer');
 const db = require('./db');
