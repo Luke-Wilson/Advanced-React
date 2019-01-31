@@ -1,3 +1,13 @@
+# You can deploy this file using 
+#     prisma deploy
+# Since we are using a non-default naming convention for our variables file we'll need to use
+#     prisma deploy -e variables.env
+
+
+# Once it is deployed, the "post-deploy" hook will run, and it will download 
+# the schema to src/generated/prisma.graphql
+# THIS IS THE MAGIC BEHIND GraphQL - It creates all the API queries and mutations for you.
+
 endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
 # Commenting out the secret for now for easy dev. Uncomment before going to production.
@@ -5,4 +15,3 @@ datamodel: datamodel.prisma
 hooks: 
   post-deploy:
     - graphql get-schema -p prisma
-
